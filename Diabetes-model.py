@@ -5,7 +5,7 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-data=pd.read_csv(r"C:\Users\Dell-Pc\Downloads\diabetes.csv")
+data=pd.read_csv('diabetes.csv')
 
 data["Glucose"]=data["Glucose"].replace(0,data["Glucose"].mean())
 data["BloodPressure"]=data["BloodPressure"].replace(0,data["BloodPressure"].mean())
@@ -25,7 +25,7 @@ x_train,x_test,y_train,y_test=train_test_split(x_res,y_res,test_size=0.25,random
 model=RandomForestClassifier(n_estimators=50,criterion="entropy",random_state=10)
 model.fit(x_train,y_train)
 
-filename = r'C:\Users\Dell-Pc\kiran\Diabetes-prediction-model.pkl'
+filename = 'Diabetes-prediction-model.pkl'
 pickle.dump(model,open(filename,'wb'))
 
 
