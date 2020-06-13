@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-filename=r"C:\Users\Dell-Pc\kiran\Diabetes-prediction-model.pkl"
+filename='Diabetes-prediction-model.pkl'
 model=pickle.load(open(filename,'rb'))
 
 app=Flask(__name__)
